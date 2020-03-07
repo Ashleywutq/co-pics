@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20200306225349) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "maps", force: :cascade do |t|
     t.string   "user"
     t.integer  "session"
