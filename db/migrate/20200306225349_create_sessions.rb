@@ -1,7 +1,8 @@
 class CreateSessions < ActiveRecord::Migration[5.0]
   def change
     create_table :sessions do |t|
-      t.text :photo
+      t.string :photo
+      t.string :name
       t.string :filter
 
       t.timestamps

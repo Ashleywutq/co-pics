@@ -12,7 +12,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create session" do
     assert_difference('Session.count') do
-      post sessions_url, params: { session: { filter: @session.filter, photo: @session.photo } }, as: :json
+      post sessions_url, params: { session: { filter: @session.filter, name: @session.name, photo: @session.photo } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update session" do
-    patch session_url(@session), params: { session: { filter: @session.filter, photo: @session.photo } }, as: :json
+    patch session_url(@session), params: { session: { filter: @session.filter, name: @session.name, photo: @session.photo } }, as: :json
     assert_response 200
   end
 

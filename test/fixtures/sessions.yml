@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  photo: MyText
+  photo: MyString
+  name: MyString
   filter: MyString
 
 two:
-  photo: MyText
+  photo: MyString
+  name: MyString
   filter: MyString
