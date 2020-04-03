@@ -9,7 +9,7 @@ class SessionsChannel < ApplicationCable::Channel
 
   def receive(data)
     session = Session.find(data["id"])
-    session.update!(photo: data["photo"])
+    session.update!(filter: data["filter"])
     ActionCable.server.broadcast("session_#{data['id']}", data)
   end
 end
